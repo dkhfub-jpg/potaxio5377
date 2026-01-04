@@ -79,7 +79,7 @@ check_server_on_start() {
     > "$LOG_FILE"
 
     ./slipstream-client \
-        --tcp-listen-port=5201 \
+        --tcp-listen-port=8080 \
         --resolver=8.8.8.8 \
         --domain="$DOMAIN" \
         --keep-alive-interval=600 \
@@ -151,10 +151,10 @@ connect_auto() {
         separator
 
         ./slipstream-client \
-            --tcp-listen-port=5201 \
+            --tcp-listen-port=8080 \
             --resolver="$SERVER" \
             --domain="$DOMAIN" \
-            --keep-alive-interval=6 \
+            --keep-alive-interval=300 \
             --congestion-control=bbr \
             --gso=true \
             > >(tee -a "$LOG_FILE") 2>&1 &
