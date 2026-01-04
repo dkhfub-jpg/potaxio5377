@@ -154,7 +154,7 @@ connect_auto() {
             --tcp-listen-port=8080 \
             --resolver="$SERVER" \
             --domain="$DOMAIN" \
-            --keep-alive-interval=300 \
+            --keep-alive-interval=3000 \
             --congestion-control=bbr \
             --gso=true \
             > >(tee -a "$LOG_FILE") 2>&1 &
