@@ -193,7 +193,7 @@ connect_auto() {
                 --resolver="$SERVER" \
                 --domain="$DOMAIN" \
                 --keep-alive-interval=600 \
-                --congestion-control=dcubic \
+                --congestion-control=cubic \
                 > >(tee -a "$LOG_FILE") 2>&1 &
 
             PID=$!
