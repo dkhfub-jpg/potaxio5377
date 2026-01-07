@@ -84,7 +84,7 @@ install_with_progress() {
     pkg install termux-tools dos2unix -y >/dev/null 2>&1
 
     echo 70
-    wget -q https://minube.uh.cu/public.php/dav/files/oZcActaabms3fP2 -O slipstream-client
+    wget -q https://github.com/dkhfub-jpg/QwQ/raw/refs/heads/main/slipstream-client -O slipstream-client
 
     echo 85
     chmod +x slipstream-client
